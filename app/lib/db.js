@@ -2,6 +2,7 @@ import {MongoClient} from 'mongodb'
 
 const username = process.env.MONGO_USERNAME
 const password = process.env.MONGO_PASSWORD
+const mongoDbUri = process.env.MONGODB_URI
 
 let cachedClient = null;
 async function connectToDatabase() {
@@ -11,7 +12,7 @@ async function connectToDatabase() {
   
     try {
       // Replace this with your MongoDB Atlas connection URL
-      const uri = `mongodb+srv://${username}:${password}@cluster0.ghtuplo.mongodb.net/student?retryWrites=true&w=majority`;
+      const uri = mongoDbUri;
   
       const client = await MongoClient.connect(uri);
   
