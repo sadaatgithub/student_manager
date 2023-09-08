@@ -1,7 +1,7 @@
 import {MongoClient} from 'mongodb'
 
-const username = process.env.MONGO_USERNAME
-const password = process.env.MONGO_PASSWORD
+// const username = process.env.MONGO_USERNAME
+// const password = process.env.MONGO_PASSWORD
 const mongoDbUri = process.env.MONGODB_URI
 
 let cachedClient = null;
